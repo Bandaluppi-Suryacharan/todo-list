@@ -7,70 +7,6 @@
     <title>To-Do-List</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .main {
-            width: 100vw;
-            height: 100vh;
-            background-color: rgb(2, 69, 46);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .box {
-            width: 30vw;
-            min-height: 50vh;
-            background-color: antiquewhite;
-            border-radius: 10px;
-            padding: 10px;
-
-        }
-
-        #enteredlist {
-            width: 100%;
-            min-height: 40px;
-            background-color: rgb(245, 245, 247);
-            border-radius: 10px;
-            border: none;
-            outline: none;
-            color: black;
-            font-size: larger;
-        }
-
-        .todolist li {
-            margin-top: 10px;
-            background-color: rgb(2, 69, 46);
-            color: white;
-            list-style-type: none;
-            font-size: 25px;
-            min-height: 30px;
-            padding: 10px;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .todolist li i {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 10px;
-            width: 50px;
-            height: 50px;
-        }
-
-        input[type=checkbox] {
-            margin-right: 10px;
-            width: 20px;
-            height: 20px;
-            accent-color: white;
-
-        }
-    </style>
 </head>
 
 <body>
@@ -86,29 +22,7 @@
 
     </div>
     </div>
-    <script>
-        
-        
-        let text = document.querySelector("input[type='text']")
-        let todo = document.querySelector(".todolist")
 
-        text.addEventListener("keyup", (event) => {
-            if (event.key == "Enter") {
-                addtodo(text.value);
-                text.value = ""
-            }
-
-        })
-        const addtodo = (text) => {
-            let listitem = document.createElement('li');
-            listitem.innerHTML = `<input type="checkbox">${text} <i class="fa-solid fa-circle-xmark"></i>`;
-            todo.appendChild(listitem);
-            listitem.querySelector('i').addEventListener("click", () => {
-                listitem.remove()
-            })
-        }
-
-    </script>
 </body>
 
 </html>
